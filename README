@@ -1,6 +1,11 @@
 I don't understand why I get exceptions when running
 
-   mvn clean test
+    mvn clean test
    
 
 I bet it is something stupid simple.
+
+
+    mvn jetty:run
+    
+works as expected. http://localhost:8088/myresource returns Hi there!
