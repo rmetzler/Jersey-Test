@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 /** Example resource class hosted at the URI path "/myresource"
  */
 @Path("/myresource")
-//@Component
-//@Scope("request")
+@Component
+@Scope("request")
 public class MyResource {
     
     /** Method processing HTTP GET requests, producing "text/plain" MIME media

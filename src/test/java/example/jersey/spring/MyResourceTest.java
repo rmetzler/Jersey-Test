@@ -19,13 +19,15 @@ public class MyResourceTest extends JerseyTest {
         super("example.jersey.spring");
     }
 
+
     @Test
+    @org.junit.Test
     public void testMyResource() throws Exception {
         WebResource webResource = resource();
 
 //        System.out.println(webResource.getURI().toString());
         
-        String responseMsg = webResource.path("myresource").get(String.class);
+        String responseMsg = webResource.path("/myresource").get(String.class);
         
         System.out.println(responseMsg);
      

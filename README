@@ -1,6 +1,6 @@
-I donÄt understand why I get exceptions when running
+I don't understand why I get exceptions when running
 
-   mvn test
+   mvn clean test
    
 
 I bet it is something stupid simple.

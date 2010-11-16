@@ -12,9 +12,13 @@
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
 
+
     <servlet>
         <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
+<!--
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+-->
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
             <param-value>example.jersey.spring</param-value>
@@ -23,6 +27,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/webresources/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
