@@ -2,12 +2,12 @@ package example.jersey.spring;
 
 import junit.framework.Assert;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.test.framework.JerseyTest;
-import com.sun.jersey.test.framework.WebAppDescriptor;
-import com.sun.jersey.test.framework.spi.container.inmemory.InMemoryTestContainerFactory;
 
 public class MyResourceTest extends JerseyTest {
 
@@ -32,6 +32,17 @@ public class MyResourceTest extends JerseyTest {
         System.out.println(responseMsg);
      
         Assert.assertTrue(responseMsg.contains("Hi there!"));
+    }
+
+    
+    @BeforeClass( alwaysRun = true )
+    public void setUp() throws Exception {
+        super.setUp();
+    }
+
+    @AfterClass( alwaysRun = true )
+    public void tearDown() throws Exception {
+        super.tearDown();
     }
 
     
