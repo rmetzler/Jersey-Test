@@ -1,11 +1,3 @@
-I don't understand why I get exceptions when running
+This is an example on how to integrate Jersey, Spring and TestNG.
 
-    mvn clean test
-   
-
-I bet it is something stupid simple.
-
-
-    mvn jetty:run
-    
-works as expected. http://localhost:8088/myresource returns Hi there!
+Tests now work. You have to use @AfterClass and @BeforeClass annotations.
